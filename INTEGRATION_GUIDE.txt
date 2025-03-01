@@ -1,0 +1,161 @@
+GUIDE D'INTÉGRATION ENA DANS LES JEUX
+====================================
+
+TABLE DES MATIÈRES
+-----------------
+1. Préparation
+2. Installation par Jeu
+3. Configuration du Modèle
+4. Test et Vérification
+5. Résolution des Problèmes
+
+1. PRÉPARATION
+-------------
+A. Vérifiez que vous avez :
+   - ENA installé (dossier Enhanced NPC Autonomous)
+   - LM Studio installé avec un modèle
+   - Python 3.8+ installé
+   - Les dépendances installées (requirements.txt)
+
+B. Démarrage du Serveur ENA :
+   1. Ouvrez une invite de commande
+   2. Naviguez vers le dossier ENA :
+      > cd "c:/Users/[votre_nom]/Desktop/Enhanced NPC autonomous"
+   3. Démarrez le serveur :
+      > python -m src.api
+
+2. INSTALLATION PAR JEU
+----------------------
+A. MINECRAFT
+   1. Localisation :
+      - Trouvez le dossier .minecraft
+      - Généralement dans : C:/Users/[votre_nom]/AppData/Roaming/.minecraft
+   
+   2. Installation :
+      - Créez un dossier 'plugins'
+      - Copiez le dossier ENA dedans
+      - Structure finale :
+        .minecraft/
+        └── plugins/
+            └── ENA/
+                ├── config.yml
+                └── data/
+
+B. SKYRIM
+   1. Localisation :
+      - Ouvrez Steam
+      - Clic droit sur Skyrim > Propriétés > Fichiers locaux > Parcourir
+   
+   2. Installation :
+      - Allez dans Data/SKSE/Plugins/
+      - Copiez le dossier ENA
+      - Structure finale :
+        Skyrim/Data/SKSE/Plugins/ENA/
+
+C. GTA V
+   1. Localisation :
+      - Dossier principal de GTA V
+      - Généralement dans : Steam/steamapps/common/Grand Theft Auto V
+   
+   2. Installation :
+      - Créez un dossier 'scripts'
+      - Copiez le dossier ENA
+      - Structure finale :
+        Grand Theft Auto V/
+        └── scripts/
+            └── ENA/
+
+D. RED DEAD REDEMPTION 2
+   1. Localisation :
+      - Dossier principal de RDR2
+   
+   2. Installation :
+      - Même procédure que GTA V
+      - Copiez dans le dossier scripts/
+
+E. FALLOUT 4
+   1. Localisation :
+      - Via Steam : Fallout 4 > Propriétés > Fichiers locaux
+   
+   2. Installation :
+      - Allez dans Data/F4SE/Plugins/
+      - Copiez le dossier ENA
+
+3. CONFIGURATION DU MODÈLE
+-------------------------
+A. LM Studio :
+   1. Ouvrez LM Studio
+   2. Chargez votre modèle (Mistral 7B recommandé)
+   3. Paramètres recommandés :
+      - Quantization : 4-bit
+      - Context Length : 4096
+      - Temperature : 0.7
+   4. Démarrez le serveur local (bouton "Start Server")
+
+B. Configuration ENA :
+   1. Ouvrez config.json dans le dossier du jeu
+   2. Vérifiez ces paramètres :
+      {
+        "model": {
+          "type": "lmstudio",
+          "url": "http://localhost:1234"
+        }
+      }
+
+4. TEST ET VÉRIFICATION
+----------------------
+A. Test Initial :
+   1. Démarrez le serveur ENA
+   2. Démarrez LM Studio et son serveur
+   3. Lancez le jeu
+   4. Vérifiez les logs dans :
+      ENA/logs/integration.log
+
+B. Test des PNJ :
+   1. Approchez un PNJ
+   2. Vérifiez que le dialogue est dynamique
+   3. Observez le comportement autonome
+
+5. RÉSOLUTION DES PROBLÈMES
+--------------------------
+A. "PNJ ne répondent pas" :
+   1. Vérifiez que le serveur ENA tourne
+   2. Vérifiez que LM Studio est connecté
+   3. Consultez les logs
+
+B. "Erreurs de chargement" :
+   1. Vérifiez les chemins d'installation
+   2. Vérifiez les permissions des dossiers
+   3. Relancez le jeu
+
+C. "Performances faibles" :
+   1. Utilisez la quantization 4-bit
+   2. Réduisez le nombre de PNJ actifs
+   3. Ajustez les paramètres dans config.json
+
+CONSEILS D'UTILISATION
+---------------------
+1. Commencez avec peu de PNJ
+2. Augmentez progressivement la complexité
+3. Surveillez les performances
+4. Faites des sauvegardes régulières
+
+COMMANDES UTILES
+---------------
+1. Démarrer ENA :
+   > python -m src.api
+
+2. Vérifier le statut :
+   > python -m src.tools.status
+
+3. Test rapide :
+   > python -m src.tools.test_integration
+
+SUPPORT
+-------
+En cas de problème :
+1. Consultez les logs
+2. Vérifiez la documentation
+3. Contactez le support
+
+Note : Gardez toujours une sauvegarde de vos fichiers de jeu originaux avant l'installation.

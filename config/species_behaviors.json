@@ -1,0 +1,100 @@
+{
+    "wolf": {
+        "pack_behavior": true,
+        "hunting_style": "pack",
+        "prey": ["deer", "rabbit", "elk"],
+        "predators": ["bear"],
+        "territory_size": 1000,
+        "active_hours": ["dawn", "dusk", "night"],
+        "sleep_duration": 6,
+        "feeding_freq": 2,
+        "social_structure": {
+            "pack_size": {"min": 3, "max": 8},
+            "hierarchy": true,
+            "pack_bonus": 1.5
+        },
+        "hunting_patterns": {
+            "ambush": 0.7,
+            "chase": 0.9,
+            "success_rate": 0.6
+        }
+    },
+    "deer": {
+        "pack_behavior": true,
+        "hunting_style": "graze",
+        "prey": ["grass", "leaves"],
+        "predators": ["wolf", "bear", "mountain_lion"],
+        "territory_size": 2000,
+        "active_hours": ["day"],
+        "sleep_duration": 4,
+        "feeding_freq": 6,
+        "social_structure": {
+            "herd_size": {"min": 5, "max": 20},
+            "hierarchy": false,
+            "herd_bonus": 1.2
+        },
+        "defense_patterns": {
+            "flight": 0.9,
+            "alert": 0.8,
+            "stamina": 0.7
+        }
+    },
+    "bear": {
+        "pack_behavior": false,
+        "hunting_style": "solo",
+        "prey": ["fish", "deer", "berries"],
+        "predators": [],
+        "territory_size": 5000,
+        "active_hours": ["day", "dusk"],
+        "sleep_duration": 8,
+        "feeding_freq": 4,
+        "social_structure": {
+            "solitary": true,
+            "mating_season": "spring"
+        },
+        "hunting_patterns": {
+            "ambush": 0.4,
+            "charge": 0.8,
+            "success_rate": 0.7
+        }
+    },
+    "rabbit": {
+        "pack_behavior": true,
+        "hunting_style": "graze",
+        "prey": ["grass", "vegetables"],
+        "predators": ["wolf", "fox", "eagle"],
+        "territory_size": 300,
+        "active_hours": ["dawn", "dusk"],
+        "sleep_duration": 6,
+        "feeding_freq": 8,
+        "social_structure": {
+            "colony_size": {"min": 10, "max": 30},
+            "hierarchy": false,
+            "group_bonus": 1.1
+        },
+        "defense_patterns": {
+            "flight": 1.0,
+            "hide": 0.9,
+            "burrow": 0.8
+        }
+    },
+    "fox": {
+        "pack_behavior": false,
+        "hunting_style": "solo",
+        "prey": ["rabbit", "mouse", "bird"],
+        "predators": ["wolf", "bear"],
+        "territory_size": 800,
+        "active_hours": ["night", "dawn", "dusk"],
+        "sleep_duration": 7,
+        "feeding_freq": 3,
+        "social_structure": {
+            "solitary": true,
+            "mating_season": "winter"
+        },
+        "hunting_patterns": {
+            "stealth": 0.9,
+            "pounce": 0.8,
+            "success_rate": 0.5
+        }
+    }
+}

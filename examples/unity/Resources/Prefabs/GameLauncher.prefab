@@ -1,0 +1,327 @@
+{
+    "prefab": {
+        "name": "GameLauncher",
+        "components": [
+            {
+                "type": "RectTransform",
+                "anchorMin": {"x": 0, "y": 0},
+                "anchorMax": {"x": 1, "y": 1},
+                "pivot": {"x": 0.5, "y": 0.5},
+                "sizeDelta": {"x": 0, "y": 0}
+            },
+            {
+                "type": "Canvas",
+                "renderMode": 1,
+                "pixelPerfect": true,
+                "sortingOrder": 1000
+            },
+            {
+                "type": "CanvasScaler",
+                "uiScaleMode": 1,
+                "referenceResolution": {"x": 1920, "y": 1080},
+                "screenMatchMode": 0
+            },
+            {
+                "type": "GraphicRaycaster"
+            },
+            {
+                "type": "GameLauncher"
+            }
+        ],
+        "children": [
+            {
+                "name": "Background",
+                "components": [
+                    {
+                        "type": "RectTransform",
+                        "anchorMin": {"x": 0, "y": 0},
+                        "anchorMax": {"x": 1, "y": 1},
+                        "pivot": {"x": 0.5, "y": 0.5},
+                        "sizeDelta": {"x": 0, "y": 0}
+                    },
+                    {
+                        "type": "Image",
+                        "color": {"r": 0, "g": 0, "b": 0, "a": 1}
+                    }
+                ]
+            },
+            {
+                "name": "LogoContainer",
+                "components": [
+                    {
+                        "type": "RectTransform",
+                        "anchorMin": {"x": 0.5, "y": 0.5},
+                        "anchorMax": {"x": 0.5, "y": 0.5},
+                        "pivot": {"x": 0.5, "y": 0.5},
+                        "sizeDelta": {"x": 400, "y": 200},
+                        "anchoredPosition": {"x": 0, "y": 100}
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Logo",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 0},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 0.5, "y": 0.5},
+                                "sizeDelta": {"x": 0, "y": 0}
+                            },
+                            {
+                                "type": "Image",
+                                "sprite": "ENA_Logo"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Title",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 0},
+                                "anchorMax": {"x": 1, "y": 0},
+                                "pivot": {"x": 0.5, "y": 0},
+                                "sizeDelta": {"x": 0, "y": 40},
+                                "anchoredPosition": {"x": 0, "y": -50}
+                            },
+                            {
+                                "type": "TextMeshProUGUI",
+                                "text": "ENA Enhanced NPC Autonomous",
+                                "fontSize": 36,
+                                "alignment": 514,
+                                "color": {"r": 1, "g": 1, "b": 1, "a": 1}
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "LoadingContainer",
+                "components": [
+                    {
+                        "type": "RectTransform",
+                        "anchorMin": {"x": 0.5, "y": 0.5},
+                        "anchorMax": {"x": 0.5, "y": 0.5},
+                        "pivot": {"x": 0.5, "y": 0.5},
+                        "sizeDelta": {"x": 400, "y": 80},
+                        "anchoredPosition": {"x": 0, "y": -50}
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "ProgressBar",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 0.5},
+                                "anchorMax": {"x": 1, "y": 0.5},
+                                "pivot": {"x": 0.5, "y": 0.5},
+                                "sizeDelta": {"x": 0, "y": 10}
+                            },
+                            {
+                                "type": "Image",
+                                "color": {"r": 0.1, "g": 0.1, "b": 0.1, "a": 0.5}
+                            }
+                        ],
+                        "children": [
+                            {
+                                "name": "Fill",
+                                "components": [
+                                    {
+                                        "type": "RectTransform",
+                                        "anchorMin": {"x": 0, "y": 0},
+                                        "anchorMax": {"x": 1, "y": 1},
+                                        "pivot": {"x": 0, "y": 0.5},
+                                        "sizeDelta": {"x": -4, "y": -4}
+                                    },
+                                    {
+                                        "type": "Image",
+                                        "color": {"r": 0.2, "g": 0.6, "b": 1, "a": 1}
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ProgressText",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 0},
+                                "anchorMax": {"x": 1, "y": 0},
+                                "pivot": {"x": 0.5, "y": 1},
+                                "sizeDelta": {"x": 0, "y": 30},
+                                "anchoredPosition": {"x": 0, "y": -20}
+                            },
+                            {
+                                "type": "TextMeshProUGUI",
+                                "text": "0%",
+                                "fontSize": 24,
+                                "alignment": 514,
+                                "color": {"r": 1, "g": 1, "b": 1, "a": 1}
+                            }
+                        ]
+                    },
+                    {
+                        "name": "StatusText",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 1},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 0.5, "y": 0},
+                                "sizeDelta": {"x": 0, "y": 30},
+                                "anchoredPosition": {"x": 0, "y": 10}
+                            },
+                            {
+                                "type": "TextMeshProUGUI",
+                                "text": "Initializing...",
+                                "fontSize": 20,
+                                "alignment": 514,
+                                "color": {"r": 0.7, "g": 0.7, "b": 0.7, "a": 1}
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ButtonContainer",
+                "components": [
+                    {
+                        "type": "RectTransform",
+                        "anchorMin": {"x": 0.5, "y": 0.5},
+                        "anchorMax": {"x": 0.5, "y": 0.5},
+                        "pivot": {"x": 0.5, "y": 0.5},
+                        "sizeDelta": {"x": 300, "y": 200},
+                        "anchoredPosition": {"x": 0, "y": -200}
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "PlayButton",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 1},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 0.5, "y": 1},
+                                "sizeDelta": {"x": 0, "y": 50}
+                            },
+                            {
+                                "type": "Image",
+                                "color": {"r": 0.1, "g": 0.1, "b": 0.1, "a": 0.5}
+                            },
+                            {
+                                "type": "Button"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "name": "Text",
+                                "components": [
+                                    {
+                                        "type": "RectTransform",
+                                        "anchorMin": {"x": 0, "y": 0},
+                                        "anchorMax": {"x": 1, "y": 1},
+                                        "pivot": {"x": 0.5, "y": 0.5},
+                                        "sizeDelta": {"x": -20, "y": -20}
+                                    },
+                                    {
+                                        "type": "TextMeshProUGUI",
+                                        "text": "PLAY",
+                                        "fontSize": 24,
+                                        "alignment": 514,
+                                        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "SettingsButton",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 1},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 0.5, "y": 1},
+                                "sizeDelta": {"x": 0, "y": 50},
+                                "anchoredPosition": {"x": 0, "y": -60}
+                            },
+                            {
+                                "type": "Image",
+                                "color": {"r": 0.1, "g": 0.1, "b": 0.1, "a": 0.5}
+                            },
+                            {
+                                "type": "Button"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "name": "Text",
+                                "components": [
+                                    {
+                                        "type": "RectTransform",
+                                        "anchorMin": {"x": 0, "y": 0},
+                                        "anchorMax": {"x": 1, "y": 1},
+                                        "pivot": {"x": 0.5, "y": 0.5},
+                                        "sizeDelta": {"x": -20, "y": -20}
+                                    },
+                                    {
+                                        "type": "TextMeshProUGUI",
+                                        "text": "SETTINGS",
+                                        "fontSize": 24,
+                                        "alignment": 514,
+                                        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "QuitButton",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 1},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 0.5, "y": 1},
+                                "sizeDelta": {"x": 0, "y": 50},
+                                "anchoredPosition": {"x": 0, "y": -120}
+                            },
+                            {
+                                "type": "Image",
+                                "color": {"r": 0.1, "g": 0.1, "b": 0.1, "a": 0.5}
+                            },
+                            {
+                                "type": "Button"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "name": "Text",
+                                "components": [
+                                    {
+                                        "type": "RectTransform",
+                                        "anchorMin": {"x": 0, "y": 0},
+                                        "anchorMax": {"x": 1, "y": 1},
+                                        "pivot": {"x": 0.5, "y": 0.5},
+                                        "sizeDelta": {"x": -20, "y": -20}
+                                    },
+                                    {
+                                        "type": "TextMeshProUGUI",
+                                        "text": "QUIT",
+                                        "fontSize": 24,
+                                        "alignment": 514,
+                                        "color": {"r": 1, "g": 1, "b": 1, "a": 1}
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

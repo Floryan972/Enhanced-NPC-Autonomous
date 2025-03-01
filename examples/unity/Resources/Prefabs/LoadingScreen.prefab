@@ -1,0 +1,186 @@
+{
+    "prefab": {
+        "name": "LoadingScreen",
+        "components": [
+            {
+                "type": "RectTransform",
+                "anchorMin": {"x": 0, "y": 0},
+                "anchorMax": {"x": 1, "y": 1},
+                "pivot": {"x": 0.5, "y": 0.5},
+                "sizeDelta": {"x": 0, "y": 0}
+            },
+            {
+                "type": "Canvas",
+                "renderMode": 1,
+                "pixelPerfect": true,
+                "sortingOrder": 1000
+            },
+            {
+                "type": "CanvasScaler",
+                "uiScaleMode": 1,
+                "referenceResolution": {"x": 1920, "y": 1080},
+                "screenMatchMode": 0
+            },
+            {
+                "type": "GraphicRaycaster"
+            },
+            {
+                "type": "LoadingScreen"
+            }
+        ],
+        "children": [
+            {
+                "name": "Background",
+                "components": [
+                    {
+                        "type": "RectTransform",
+                        "anchorMin": {"x": 0, "y": 0},
+                        "anchorMax": {"x": 1, "y": 1},
+                        "pivot": {"x": 0.5, "y": 0.5},
+                        "sizeDelta": {"x": 0, "y": 0}
+                    },
+                    {
+                        "type": "Image",
+                        "color": {"r": 0, "g": 0, "b": 0, "a": 0.9}
+                    }
+                ]
+            },
+            {
+                "name": "LogoContainer",
+                "components": [
+                    {
+                        "type": "RectTransform",
+                        "anchorMin": {"x": 1, "y": 0},
+                        "anchorMax": {"x": 1, "y": 0},
+                        "pivot": {"x": 1, "y": 0},
+                        "anchoredPosition": {"x": -20, "y": 20},
+                        "sizeDelta": {"x": 300, "y": 150}
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Logo",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 0},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 0.5, "y": 0.5},
+                                "sizeDelta": {"x": 0, "y": 0}
+                            },
+                            {
+                                "type": "Image",
+                                "sprite": "ENA_Logo"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Title",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 1},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 0.5, "y": 1},
+                                "anchoredPosition": {"x": 0, "y": 10},
+                                "sizeDelta": {"x": 0, "y": 30}
+                            },
+                            {
+                                "type": "TextMeshProUGUI",
+                                "text": "ENA Enhanced NPC Autonomous",
+                                "fontSize": 24,
+                                "alignment": 514
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ProgressBarContainer",
+                "components": [
+                    {
+                        "type": "RectTransform",
+                        "anchorMin": {"x": 1, "y": 0},
+                        "anchorMax": {"x": 1, "y": 0},
+                        "pivot": {"x": 1, "y": 0},
+                        "anchoredPosition": {"x": -20, "y": 180},
+                        "sizeDelta": {"x": 300, "y": 30}
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "Background",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 0},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 0.5, "y": 0.5},
+                                "sizeDelta": {"x": 0, "y": 0}
+                            },
+                            {
+                                "type": "Image",
+                                "color": {"r": 0.1, "g": 0.1, "b": 0.1, "a": 0.5}
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Fill",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 0, "y": 0},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 0, "y": 0.5},
+                                "sizeDelta": {"x": -4, "y": -4}
+                            },
+                            {
+                                "type": "Image",
+                                "color": {"r": 0.2, "g": 0.6, "b": 1, "a": 1}
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ProgressText",
+                        "components": [
+                            {
+                                "type": "RectTransform",
+                                "anchorMin": {"x": 1, "y": 0},
+                                "anchorMax": {"x": 1, "y": 1},
+                                "pivot": {"x": 1, "y": 0.5},
+                                "anchoredPosition": {"x": -10, "y": 0},
+                                "sizeDelta": {"x": 100, "y": 0}
+                            },
+                            {
+                                "type": "TextMeshProUGUI",
+                                "text": "0%",
+                                "fontSize": 18,
+                                "alignment": 516
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "StatusText",
+                "components": [
+                    {
+                        "type": "RectTransform",
+                        "anchorMin": {"x": 1, "y": 0},
+                        "anchorMax": {"x": 1, "y": 0},
+                        "pivot": {"x": 1, "y": 0},
+                        "anchoredPosition": {"x": -20, "y": 220},
+                        "sizeDelta": {"x": 300, "y": 30}
+                    },
+                    {
+                        "type": "TextMeshProUGUI",
+                        "text": "Initializing...",
+                        "fontSize": 16,
+                        "alignment": 514,
+                        "color": {"r": 0.7, "g": 0.7, "b": 0.7, "a": 1}
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,65 @@
+[
+    {
+        "id": "merchant_john",
+        "template": "merchant",
+        "name": "John Smith",
+        "title": "Propriétaire de la Boutique Générale",
+        "location": "market_district",
+        "personality": {
+            "traits": {
+                "openness": 0.7
+            }
+        },
+        "knowledge": {
+            "skills": {
+                "bargaining": 85
+            }
+        },
+        "relationships": {
+            "merchant_sarah": "friend",
+            "guard_michael": "acquaintance"
+        }
+    },
+    {
+        "id": "guard_michael",
+        "template": "guard",
+        "name": "Michael Steel",
+        "title": "Capitaine de la Garde",
+        "location": "guard_tower",
+        "personality": {
+            "traits": {
+                "conscientiousness": 0.9
+            }
+        },
+        "combat": {
+            "armor_class": 18,
+            "special_abilities": ["shield_master"]
+        },
+        "relationships": {
+            "merchant_john": "acquaintance",
+            "guard_emma": "mentor"
+        }
+    },
+    {
+        "id": "innkeeper_mary",
+        "template": "innkeeper",
+        "name": "Mary Rose",
+        "title": "Propriétaire de l'Auberge du Dragon d'Or",
+        "location": "golden_dragon_inn",
+        "personality": {
+            "traits": {
+                "extraversion": 0.9
+            }
+        },
+        "knowledge": {
+            "topics": ["ancient_legends", "local_gossip", "food_drink"]
+        },
+        "relationships": {
+            "merchant_john": "regular_customer",
+            "guard_michael": "informant"
+        },
+        "economy": {
+            "special_dishes": ["mary_special_stew", "dragon_ale"]
+        }
+    }
+]

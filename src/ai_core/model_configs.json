@@ -1,0 +1,65 @@
+{
+    "model_types": {
+        "llama": {
+            "model_type": "llama",
+            "prompt_template": "### Instruction: {prompt}\n\n### Response:",
+            "stop_words": ["### Instruction", "### Response"],
+            "parameters": {
+                "max_tokens": 150,
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "gpu_layers": 50
+            }
+        },
+        "mistral": {
+            "model_type": "mistral",
+            "prompt_template": "<s>[INST] {prompt} [/INST]",
+            "stop_words": ["[INST]", "</s>"],
+            "parameters": {
+                "max_tokens": 150,
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "gpu_layers": 50
+            }
+        },
+        "phi": {
+            "model_type": "phi",
+            "prompt_template": "Instruct: {prompt}\nOutput:",
+            "stop_words": ["Instruct:", "Output:"],
+            "parameters": {
+                "max_tokens": 150,
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "gpu_layers": 50
+            }
+        },
+        "gpt4all": {
+            "model_type": "gpt4all",
+            "prompt_template": "### Human: {prompt}\n### Assistant:",
+            "stop_words": ["### Human:", "### Assistant:"],
+            "parameters": {
+                "max_tokens": 150,
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "gpu_layers": 50
+            }
+        }
+    },
+    "role_configs": {
+        "npc_dialogue": {
+            "system_prompt": "Tu es un PNJ intelligent dans un monde ouvert. Tu dois répondre de manière cohérente avec ton rôle et ta personnalité.",
+            "temperature": 0.8,
+            "max_tokens": 200
+        },
+        "animal_behavior": {
+            "system_prompt": "Tu simules le comportement réaliste d'un animal sauvage. Prends en compte l'environnement et les instincts naturels.",
+            "temperature": 0.6,
+            "max_tokens": 100
+        },
+        "mission_generation": {
+            "system_prompt": "Tu es un générateur de missions complexes et intéressantes. Crée des missions avec des objectifs multiples et des choix significatifs.",
+            "temperature": 0.9,
+            "max_tokens": 300
+        }
+    }
+}

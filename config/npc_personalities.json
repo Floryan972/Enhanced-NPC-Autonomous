@@ -1,0 +1,158 @@
+{
+    "merchant": {
+        "base_traits": {
+            "friendliness": 0.7,
+            "honesty": 0.8,
+            "greed": 0.6,
+            "knowledge": 0.7
+        },
+        "dialogue_style": {
+            "formal": 0.6,
+            "persuasive": 0.8,
+            "informative": 0.7
+        },
+        "daily_routines": [
+            {
+                "time": "morning",
+                "activity": "open_shop",
+                "location": "shop",
+                "duration": 2
+            },
+            {
+                "time": "noon",
+                "activity": "inventory_check",
+                "location": "shop",
+                "duration": 1
+            },
+            {
+                "time": "evening",
+                "activity": "close_shop",
+                "location": "shop",
+                "duration": 1
+            }
+        ],
+        "knowledge_base": [
+            "local_economy",
+            "trade_routes",
+            "item_values",
+            "market_demands"
+        ]
+    },
+    "guard": {
+        "base_traits": {
+            "duty": 0.9,
+            "courage": 0.8,
+            "suspicion": 0.7,
+            "authority": 0.8
+        },
+        "dialogue_style": {
+            "formal": 0.7,
+            "authoritative": 0.8,
+            "direct": 0.9
+        },
+        "daily_routines": [
+            {
+                "time": "dawn",
+                "activity": "patrol_start",
+                "location": "city_gates",
+                "duration": 4
+            },
+            {
+                "time": "noon",
+                "activity": "guard_post",
+                "location": "market_square",
+                "duration": 4
+            },
+            {
+                "time": "dusk",
+                "activity": "night_patrol",
+                "location": "city_walls",
+                "duration": 4
+            }
+        ],
+        "knowledge_base": [
+            "city_layout",
+            "criminal_records",
+            "guard_protocols",
+            "local_laws"
+        ]
+    },
+    "innkeeper": {
+        "base_traits": {
+            "friendliness": 0.8,
+            "hospitality": 0.9,
+            "gossip": 0.7,
+            "wisdom": 0.6
+        },
+        "dialogue_style": {
+            "casual": 0.8,
+            "welcoming": 0.9,
+            "storytelling": 0.7
+        },
+        "daily_routines": [
+            {
+                "time": "morning",
+                "activity": "prepare_breakfast",
+                "location": "inn_kitchen",
+                "duration": 2
+            },
+            {
+                "time": "afternoon",
+                "activity": "manage_inn",
+                "location": "inn_common_room",
+                "duration": 6
+            },
+            {
+                "time": "night",
+                "activity": "close_inn",
+                "location": "inn",
+                "duration": 1
+            }
+        ],
+        "knowledge_base": [
+            "local_rumors",
+            "traveler_stories",
+            "inn_management",
+            "local_attractions"
+        ]
+    },
+    "blacksmith": {
+        "base_traits": {
+            "craftsmanship": 0.9,
+            "strength": 0.8,
+            "patience": 0.7,
+            "pride": 0.8
+        },
+        "dialogue_style": {
+            "direct": 0.7,
+            "technical": 0.8,
+            "proud": 0.7
+        },
+        "daily_routines": [
+            {
+                "time": "morning",
+                "activity": "start_forge",
+                "location": "smithy",
+                "duration": 2
+            },
+            {
+                "time": "day",
+                "activity": "crafting",
+                "location": "smithy",
+                "duration": 8
+            },
+            {
+                "time": "evening",
+                "activity": "cleanup",
+                "location": "smithy",
+                "duration": 1
+            }
+        ],
+        "knowledge_base": [
+            "metallurgy",
+            "weapon_crafting",
+            "armor_making",
+            "material_properties"
+        ]
+    }
+}

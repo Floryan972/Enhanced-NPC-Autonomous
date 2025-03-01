@@ -1,0 +1,70 @@
+{
+    "behaviors": [
+        {
+            "name": "healing",
+            "state": "HEALING",
+            "priority": 1.0,
+            "conditions": {
+                "health_threshold": 0.3,
+                "has_medkit": true
+            },
+            "actions": [
+                {
+                    "type": "use_item",
+                    "params": {
+                        "item_type": "medkit"
+                    }
+                }
+            ],
+            "cooldown": 5.0
+        },
+        {
+            "name": "combat_defensive",
+            "state": "COMBAT",
+            "priority": 0.8,
+            "conditions": {
+                "in_combat": true,
+                "health_threshold": 0.7
+            },
+            "actions": [
+                {
+                    "type": "movement",
+                    "params": {
+                        "find_cover": true
+                    }
+                },
+                {
+                    "type": "combat",
+                    "params": {
+                        "style": "defensive"
+                    }
+                }
+            ],
+            "cooldown": 1.0
+        },
+        {
+            "name": "combat_aggressive",
+            "state": "COMBAT",
+            "priority": 0.9,
+            "conditions": {
+                "in_combat": true,
+                "health_threshold": 0.8
+            },
+            "actions": [
+                {
+                    "type": "movement",
+                    "params": {
+                        "close_distance": true
+                    }
+                },
+                {
+                    "type": "combat",
+                    "params": {
+                        "style": "aggressive"
+                    }
+                }
+            ],
+            "cooldown": 1.0
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "player_control": {
+        "enabled": true,
+        "switch_key": "F5",
+        "ai_control": {
+            "update_rate": 0.05,
+            "context_window": 2048,
+            "decision_threshold": 0.7,
+            "memory_size": 1000
+        },
+        "behaviors": {
+            "combat": {
+                "aggression": 0.7,
+                "self_preservation": 0.8,
+                "tactical_awareness": 0.9
+            },
+            "exploration": {
+                "curiosity": 0.8,
+                "caution": 0.7,
+                "resource_awareness": 0.9
+            },
+            "social": {
+                "faction_relations": 0.8,
+                "trading": 0.7,
+                "dialogue": 0.9
+            }
+        },
+        "priorities": {
+            "survival": 1.0,
+            "mission": 0.9,
+            "exploration": 0.7,
+            "loot": 0.6,
+            "social": 0.5
+        }
+    }
+}

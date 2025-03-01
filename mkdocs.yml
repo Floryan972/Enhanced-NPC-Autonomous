@@ -1,0 +1,112 @@
+site_name: ENA Documentation
+site_description: Documentation for Enhanced NPC Autonomous System
+site_author: ENA Team
+repo_url: https://github.com/yourusername/enhanced-npc-autonomous
+edit_uri: ""
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: blue
+    accent: light blue
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.ico
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quick-start.md
+    - Configuration: getting-started/configuration.md
+  - Core Systems:
+    - Overview: core/overview.md
+    - AI Loader: core/ai-loader.md
+    - NPC Systems: core/npc-systems.md
+    - Memory System: core/memory-system.md
+    - Behavior System: core/behavior-system.md
+  - Game Integration:
+    - Unity:
+      - Setup: integration/unity/setup.md
+      - NPCManager: integration/unity/npc-manager.md
+      - LoadingScreen: integration/unity/loading-screen.md
+    - Unreal:
+      - Setup: integration/unreal/setup.md
+      - NPCManager: integration/unreal/npc-manager.md
+  - API Reference:
+    - REST API: api/rest-api.md
+    - WebSocket: api/websocket.md
+    - Data Models: api/data-models.md
+  - Advanced:
+    - Performance: advanced/performance.md
+    - Security: advanced/security.md
+    - Customization: advanced/customization.md
+  - Contributing:
+    - Guidelines: contributing/guidelines.md
+    - Development: contributing/development.md
+  - FAQ: faq.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+  - git-revision-date-localized:
+      type: datetime
+      locale: en
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true
+            show_if_no_docstring: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/enhanced-npc-autonomous
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/your-discord
+  version:
+    provider: mike
+
+copyright: Copyright &copy; 2025 ENA Team

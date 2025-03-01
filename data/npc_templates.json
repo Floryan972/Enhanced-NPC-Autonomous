@@ -1,0 +1,162 @@
+{
+    "merchant": {
+        "base_stats": {
+            "health": 100,
+            "stamina": 100,
+            "magicka": 50
+        },
+        "personality": {
+            "traits": {
+                "openness": 0.6,
+                "conscientiousness": 0.8,
+                "extraversion": 0.7,
+                "agreeableness": 0.6,
+                "neuroticism": 0.3
+            },
+            "values": {
+                "honesty": 0.8,
+                "ambition": 0.7,
+                "tradition": 0.6
+            }
+        },
+        "knowledge": {
+            "skills": {
+                "bargaining": 80,
+                "appraisal": 70,
+                "speechcraft": 60
+            },
+            "topics": ["commerce", "local_news", "economics"]
+        },
+        "routine": {
+            "activities": [
+                {
+                    "name": "open_shop",
+                    "start_time": "08:00",
+                    "end_time": "18:00",
+                    "priority": 0.8,
+                    "location": "shop"
+                },
+                {
+                    "name": "inventory",
+                    "start_time": "18:00",
+                    "end_time": "19:00",
+                    "priority": 0.7,
+                    "location": "shop"
+                }
+            ]
+        },
+        "economy": {
+            "base_gold": 1000,
+            "inventory_capacity": 100,
+            "price_modifier": 1.2
+        }
+    },
+    "guard": {
+        "base_stats": {
+            "health": 150,
+            "stamina": 120,
+            "magicka": 30
+        },
+        "personality": {
+            "traits": {
+                "openness": 0.4,
+                "conscientiousness": 0.8,
+                "extraversion": 0.6,
+                "agreeableness": 0.5,
+                "neuroticism": 0.3
+            },
+            "values": {
+                "justice": 0.9,
+                "duty": 0.9,
+                "order": 0.8
+            }
+        },
+        "knowledge": {
+            "skills": {
+                "combat": 80,
+                "investigation": 60,
+                "intimidation": 70
+            },
+            "topics": ["law", "combat", "local_crime"]
+        },
+        "routine": {
+            "activities": [
+                {
+                    "name": "patrol",
+                    "start_time": "06:00",
+                    "end_time": "18:00",
+                    "priority": 0.8,
+                    "location": "city_streets"
+                },
+                {
+                    "name": "guard_gate",
+                    "start_time": "18:00",
+                    "end_time": "06:00",
+                    "priority": 0.9,
+                    "location": "city_gate"
+                }
+            ]
+        },
+        "combat": {
+            "armor_class": 16,
+            "weapon_proficiency": ["sword", "bow"],
+            "combat_style": "defensive"
+        }
+    },
+    "innkeeper": {
+        "base_stats": {
+            "health": 100,
+            "stamina": 90,
+            "magicka": 40
+        },
+        "personality": {
+            "traits": {
+                "openness": 0.7,
+                "conscientiousness": 0.6,
+                "extraversion": 0.8,
+                "agreeableness": 0.7,
+                "neuroticism": 0.4
+            },
+            "values": {
+                "hospitality": 0.9,
+                "community": 0.8,
+                "tradition": 0.7
+            }
+        },
+        "knowledge": {
+            "skills": {
+                "cooking": 70,
+                "management": 60,
+                "speechcraft": 80
+            },
+            "topics": ["local_gossip", "food_drink", "hospitality"]
+        },
+        "routine": {
+            "activities": [
+                {
+                    "name": "prepare_breakfast",
+                    "start_time": "06:00",
+                    "end_time": "09:00",
+                    "priority": 0.9,
+                    "location": "inn_kitchen"
+                },
+                {
+                    "name": "manage_inn",
+                    "start_time": "09:00",
+                    "end_time": "22:00",
+                    "priority": 0.8,
+                    "location": "inn_common_room"
+                }
+            ]
+        },
+        "economy": {
+            "base_gold": 500,
+            "room_prices": {
+                "common": 10,
+                "private": 25,
+                "suite": 50
+            },
+            "menu_items": ["bread", "stew", "ale", "wine"]
+        }
+    }
+}

@@ -1,0 +1,3 @@
+@echo off
+echo Running ENA System Tests...
+python -m pytest tests/ -v --capture=no
